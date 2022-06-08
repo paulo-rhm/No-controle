@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon" />
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>No Controle</title>
+</head>
+
+<body>
+    
+    <header>
+        <h1 id="logo">No Controle</h1>
+    </header>
+
+    <main class="container">
+        <section id="balance">
+            <div class="card">
+                <h3>Entradas</h3>
+                <p id="incomeDisplay">R$ 0,00</p>
+            </div>
+
+            <div class="card">
+                <h3>Saídas</h3>
+                <p id="expenseDisplay">R$ 0,00</p>
+            </div>
+
+            <div class="card total">
+                <h3>Total</h3>
+                <p id="totalDisplay">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section id="transaction">
+            <h2>Transaçoes</h2>
+    
+            <a href="#" onclick="modal.open()" class="button new">
+                + nova transação
+            </a>
+    
+            <table id="data-base">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    
+    </main>
+
+       <!-- metas -->
+        <aside id="metas">
+
+            <div class="to-do">
+                <div class="header">
+                  <h2>Minhas Metas e Tarefas</h2>
+                  <button><i class='bx bxs-trash-alt'></i></button>
+                </div>
+                <hr/>
+                <br/>
+                <div class="divInsert">
+                  <input class="textInsert" type="text" />
+                  <button><i class='bx bx-plus'></i></button>
+                </div>
+                <ul></ul>
+              </div>
+
+              <div class="teste">
+                  <h2>Dicas</h2>
+              <hr/>
+              <br/>
+
+              <div class="dicas">
+                <ol start="1">
+                    <li>Anote todos os seus gastos. <br/>
+                         Assim você vai saber as entradas e saídas.</li>
+                    <li>Crie uma reserva de emergência.</li>
+                    <li>Estabeleça objetivos, Faça um levantamento de todos os sonhos que você quer realizar, separando-os por prazo.
+                    </li>
+                    <li>Evite gastos desnecessários, você realmente está precisando disso.
+                    <li>Faça um orçamento dos seus gastos fixos.</li> 
+                    <li>Saia do vermelho.</li>
+                    <li>Invista</li>   
+                    </li>
+                    <li>Tenha disciplina</li>
+                </ol>
+              </div>
+
+              </div>
+        </aside>
+
+        <div class="test-api">
+
+        </div>
+    
+    <div class="modal-overlay active">
+        <div class="modal">
+            <div id="form">
+                <h2>Nova Transação</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <label class="sr-only" for="description">Descrição</label>
+                        <input type="text" id="description" name="description" placeholder="Descrição" />
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="amount">Valor</label>
+                        <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00" />
+
+                        <small class="help">Use o sinal -(nagativo) para despesas</small>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="date">Data</label>
+                        <input type="date" id="date" name="date" />
+                    </div>
+
+                    <div class="input-group actions">
+                        <a onclick="modal.close()" href="#" class="button cancel">
+                            Cancelar
+                        </a>
+                        <button>Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>No Controle</footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
